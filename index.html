@@ -1,12 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CGW - Home</title>
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }.banner {
+  width: 100%;
+  height: 200px;
+  background-color: #222;
+  background-image: url('CGW-Banner.jpg');
+  background-size: cover;
+  background-position: center;
+}
 
-    .news-flex {
+.nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: crimson;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.news-box {
+  background-color: #222;
+  width: 70%;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.news-box h2 {
+  margin-top: 0;
+}
+
+.news-flex {
   display: flex;
   gap: 20px;
 }
@@ -18,6 +67,37 @@
   border-radius: 8px;
 }
 
+.news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.news-card {
+  background-color: #1a1a1a;
+  border-left: 4px solid crimson;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.news-card h4 {
+  margin-top: 0;
+  color: white;
+}
+
+.news-card .date {
+  font-size: 0.8em;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.news-card p {
+  color: #ccc;
+}
+
 .news-detail {
   margin-top: 20px;
   background-color: #1a1a1a;
@@ -25,185 +105,103 @@
   border-left: 4px solid crimson;
   border-radius: 6px;
 }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: white;
-    }
 
-    .banner {
-      width: 100%;
-      height: 200px;
-      background-color: #222;
-      background-image: url('file_0000000007ec61f4b09e6eb647805889.png'); /* kendi dosya adını kullan */
-      background-size: cover;
-      background-position: center;
-    }
+.power-rankings {
+  background-color: #222;
+  width: 25%;
+  height: 200px;
+  padding: 20px;
+  border-radius: 8px;
+}
 
-    .nav {
-      background-color: #333;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px 0;
-    }
+.power-rankings h3 {
+  margin-top: 0;
+  color: crimson;
+}
 
-    .nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
 
-    .nav a:hover {
-      text-decoration: underline;
-      color: crimson;
-    }
+  .news-box, .power-rankings {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-    .main-content {
-      display: flex;
-      justify-content: space-between;
-      padding: 40px;
-      flex-wrap: wrap;
-    }
+  .news-flex {
+    flex-direction: column;
+  }
 
-    .news-box {
-      background-color: #222;
-      width: 70%;
-      padding: 20px;
-      border-radius: 8px;
-    }
+  .news-main-image img {
+    width: 100%;
+    height: auto;
+  }
+}
 
-    .news-box h2 {
-      margin-top: 0;
-    }
-
-    .news-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .news-card {
-      background-color: #1a1a1a;
-      border-left: 4px solid crimson;
-      padding: 15px;
-      width: 30%;
-      border-radius: 6px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-
-    .news-card h4 {
-      margin-top: 0;
-      color: white;
-    }
-
-    .news-card .date {
-      font-size: 0.8em;
-      color: gray;
-      margin-bottom: 10px;
-    }
-
-    .news-card p {
-      color: #ccc;
-    }
-
-    .power-rankings {
-      background-color: #222;
-      width: 25%;
-      height: 200px;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    .power-rankings h3 {
-      margin-top: 0;
-      color: crimson;
-    }
-
-    @media (max-width: 768px) {
-      .main-content {
-        flex-direction: column;
-      }
-
-      .news-box, .power-rankings {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
-      .news-card {
-        width: 100%;
-      }
-    }
   </style>
 </head>
-<body>
-
-  <div class="banner"></div>
-
-  <div class="nav">
+<body>  <div class="banner"></div>  <div class="nav">
     <a href="#">Home</a>
     <a href="#">Shows</a>
     <a href="#">PPVs</a>
     <a href="#">Wrestlers</a>
     <a href="#">Championships</a>
     <a href="#">Standings</a>
-  </div>
-
-  <div class="main-content">
+  </div>  <div class="main-content">
     <div class="news-box">
       <h2>Latest News</h2>
-      <div class="news-container">
-        <div class="news-card">
-          <h4>Luck of The Draw Announced!</h4>
-          <p class="date">May 24, 2025</p>
-          <p>The first CGW PPV has been officially revealed. Who will earn the golden contract?</p>
+      <div class="news-flex">
+        <div class="news-main-image">
+          <img id="mainImage" src="main-news.jpg" alt="Main News" />
         </div>
-        <div class="news-card">
-          <h4>Johnny Rogue Dominates Pulse</h4>
-          <p class="date">May 22, 2025</p>
-          <p>Rogue crushed all competition again. Is there anyone left who can stop him?</p>
-        </div>
-        <div class="news-card">
-          <h4>Tag Team Turmoil Incoming</h4>
-          <p class="date">May 21, 2025</p>
-          <p>New tag teams are forming as CGW prepares for the first Tag Division rankings.</p>
+        <div class="news-container">
+          <div class="news-card" onclick="showNews('luck')">
+            <h4>Luck of The Draw Announced!</h4>
+            <p class="date">May 24, 2025</p>
+            <p>The first CGW PPV has been officially revealed.</p>
+          </div>
+          <div class="news-card" onclick="showNews('rogue')">
+            <h4>Johnny Rogue Dominates Pulse</h4>
+            <p class="date">May 22, 2025</p>
+            <p>Rogue crushed all competition again.</p>
+          </div>
         </div>
       </div>
-    </div>
+      <div id="news-detail" class="news-detail" style="display:none;">
+        <h3 id="detail-title"></h3>
+        <img id="detail-image" src="" alt="" style="width:100%; max-height:200px; object-fit:cover; border-radius:6px;" />
+        <p id="detail-body" style="margin-top:10px;"></p>
+      </div>
+    </div><div class="power-rankings">
+  <h3>Top 5 of the Week</h3>
+  <ol>
+    <li>Johnny Rogue</li>
+    <li>Geordie Gunter</li>
+    <li>Ade</li>
+    <li>Titan</li>
+    <li>Shayne Twilight</li>
+  </ol>
+</div>
 
-    <div class="power-rankings">
-      <h3>Top 5 of the Week</h3>
-      <ol>
-        <li>Johnny Rogue</li>
-        <li>Geordie Gunter</li>
-        <li>Ade</li>
-        <li>Titan</li>
-        <li>Shayne Twilight</li>
-      </ol>
-    </div>
-  </div>
-/* JS kodlari */
-<script>
-  function showNews(id) {
-    const detailBox = document.getElementById('news-detail');
-    const title = document.getElementById('detail-title');
-    const body = document.getElementById('detail-body');
-    const image = document.getElementById('detail-image');
+  </div>  <script>
+    function showNews(id) {
+      const detailBox = document.getElementById('news-detail');
+      const title = document.getElementById('detail-title');
+      const body = document.getElementById('detail-body');
+      const image = document.getElementById('detail-image');
 
-    detailBox.style.display = 'block';
+      detailBox.style.display = 'block';
 
-    if (id === 'luck') {
-      title.textContent = 'Luck of The Draw Announced!';
-      body.textContent = 'CGW\'s first PPV is coming. With stakes high and egos higher, who will walk out with the contract?';
-      image.src = 'luck.jpg'; // görsel dosyasını repo'ya yüklemelisin
-    } else if (id === 'rogue') {
-      title.textContent = 'Johnny Rogue Dominates Pulse';
-      body.textContent = 'Another main event, another victim. Johnny Rogue shows no mercy and no signs of slowing down.';
-      image.src = 'rogue.jpg';
+      if (id === 'luck') {
+        title.textContent = 'Luck of The Draw Announced!';
+        body.textContent = 'CGW\'s first PPV is coming. With stakes high and egos higher, who will walk out with the contract?';
+        image.src = 'luck.jpg';
+      } else if (id === 'rogue') {
+        title.textContent = 'Johnny Rogue Dominates Pulse';
+        body.textContent = 'Another main event, another victim. Johnny Rogue shows no mercy and no signs of slowing down.';
+        image.src = 'rogue.jpg';
+      }
     }
-  }
-</script>  
-</body>
+  </script></body>
 </html>
