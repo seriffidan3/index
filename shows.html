@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,109 +10,206 @@
       font-family: Arial, sans-serif;
       background-color: #111;
       color: white;
-    }.nav {
-  background-color: #333;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px 0;
-}
+    }
 
-.nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+    }
 
-.nav a:hover {
-  text-decoration: underline;
-  color: crimson;
-}
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.container {
-  padding: 30px;
-}
+    .nav a:hover {
+      text-decoration: underline;
+      color: crimson;
+    }
 
-.show-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    .container {
+      padding: 30px;
+    }
 
-.show-card {
-  background-color: #1a1a1a;
-  width: 200px;
-  border-left: 4px solid crimson;
-  border-radius: 6px;
-  cursor: pointer;
-  padding: 10px;
-  transition: background 0.3s;
-}
+    .show-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-.show-card:hover {
-  background-color: #2a2a2a;
-}
+    .show-card {
+      background-color: #1a1a1a;
+      width: 200px;
+      border-left: 4px solid crimson;
+      border-radius: 6px;
+      cursor: pointer;
+      padding: 10px;
+      transition: background 0.3s;
+    }
 
-.show-card img {
-  width: 100%;
-  height: 100px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
+    .show-card:hover {
+      background-color: #2a2a2a;
+    }
 
-.show-detail {
-  margin-top: 30px;
-  background-color: #1a1a1a;
-  padding: 20px;
-  border-left: 4px solid crimson;
-  border-radius: 6px;
-  display: none;
-}
+    .show-card img {
+      width: 100%;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
 
+    .show-detail {
+      margin-top: 30px;
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-left: 4px solid crimson;
+      border-radius: 6px;
+      display: none;
+    }
   </style>
 </head>
-<body>  <div class="nav">
+<body>
+
+  <div class="nav">
     <a href="index.html">Home</a>
     <a href="shows.html">Shows</a>
     <a href="#">PPVs</a>
     <a href="#">Wrestlers</a>
     <a href="#">Championships</a>
     <a href="#">Standings</a>
-  </div>  <div class="container">
+  </div>
+
+  <div class="container">
     <h1>CGW Shows</h1>
     <div class="show-grid">
       <div class="show-card" onclick="showDetail('pulse')">
-        <img src="file_00000000f98c620a8c7590e1232bb448.png" alt="Pulse">
-        <h4>PULSE</h4>
+        <img src="pulse-logo.png" alt="Pulse"><h4>PULSE</h4>
       </div>
       <div class="show-card" onclick="showDetail('lotd')">
-        <img src="lotd-logo.png" alt="Luck of the Draw">
-        <h4>Luck Of The Draw</h4>
+        <img src="lotd-logo.png" alt="Luck of the Draw"><h4>Luck Of The Draw</h4>
       </div>
-    </div><div class="show-detail" id="show-detail">
-  <h2 id="detail-title"></h2>
-  <p id="detail-description"></p>
-  <p><strong>Date:</strong> <span id="detail-date"></span></p>
-</div>
+      <div class="show-card" onclick="showDetail('crimson')">
+        <img src="crimson-logo.png" alt="Crimson Divide"><h4>Crimson Divide</h4>
+      </div>
+      <div class="show-card" onclick="showDetail('martyr')">
+        <img src="martyr-logo.png" alt="Martyr"><h4>Martyr</h4>
+      </div>
+      <div class="show-card" onclick="showDetail('streets')">
+        <img src="streets-logo.png" alt="Streets Won't Forget"><h4>Streets Won't Forget</h4>
+      </div>
+      <div class="show-card" onclick="showDetail('jackpot')">
+        <img src="jackpot-logo.png" alt="Jackpot"><h4>Jackpot</h4>
+      </div>
+      <div class="show-card" onclick="showDetail('countdown')">
+        <img src="countdown-logo.png" alt="Countdown"><h4>Countdown</h4>
+      </div>
+      <div class="show-card" onclick="showDetail('pinnacle')">
+        <img src="pinnacle-logo.png" alt="Pinnacle"><h4>Pinnacle</h4>
+      </div>
+      <div class="show-card" onclick="showDetail('scorched')">
+        <img src="scorched-logo.png" alt="Scorched Earth"><h4>Scorched Earth</h4>
+      </div>
+      <div class="show-card" onclick="showDetail('veil')">
+        <img src="veil-logo.png" alt="Glass Veil"><h4>Glass Veil</h4>
+      </div>
+      <div class="show-card" onclick="showDetail('legacy')">
+        <img src="legacy-logo.png" alt="Legacy Trials"><h4>Legacy Trials</h4>
+      </div>
+      <div class="show-card" onclick="showDetail('final')">
+        <img src="final-logo.png" alt="Final Judgment"><h4>Final Judgment</h4>
+      </div>
+    </div>
 
-  </div>  <script>
+    <div class="show-detail" id="show-detail">
+      <h2 id="detail-title"></h2>
+      <p id="detail-description"></p>
+      <p><strong>Date:</strong> <span id="detail-date"></span></p>
+    </div>
+  </div>
+
+  <script>
     function showDetail(id) {
       const title = document.getElementById('detail-title');
       const desc = document.getElementById('detail-description');
       const date = document.getElementById('detail-date');
       const box = document.getElementById('show-detail');
 
-      if (id === 'pulse') {
-        title.textContent = 'PULSE';
-        desc.textContent = 'The weekly heartbeat of CGW — where rivalries rise, chaos brews, and stars are made.';
-        date.textContent = 'Every Week (Mondays)';
-      } else if (id === 'lotd') {
-        title.textContent = 'Luck Of The Draw';
-        desc.textContent = 'The first PPV of the season. One night. One opportunity. Random chance meets destiny.';
-        date.textContent = 'May 24, 2025';
-      }
+      const shows = {
+        pulse: {
+          title: 'PULSE',
+          desc: 'The weekly heartbeat of CGW — where rivalries rise, chaos brews, and stars are made.',
+          date: 'Every Monday'
+        },
+        lotd: {
+          title: 'Luck Of The Draw',
+          desc: 'The first PPV of the season. One night. One opportunity. Random chance meets destiny.',
+          date: 'May 24, 2025'
+        },
+        crimson: {
+          title: 'Crimson Divide',
+          desc: 'Two worlds clash. A mid-season proving ground full of tension, redemption, and raw power.',
+          date: 'June 21, 2025'
+        },
+        martyr: {
+          title: 'Martyr',
+          desc: 'Sacrifice defines this night. Only those willing to fall can rise again.',
+          date: 'July 5, 2025'
+        },
+        streets: {
+          title: 'Streets Won\'t Forget',
+          desc: 'Underground chaos meets the main stage. Old scores, real heat.',
+          date: 'August 2, 2025'
+        },
+        jackpot: {
+          title: 'Jackpot',
+          desc: 'Opportunity spins at random. Who hits the metaphorical slot and claims the prize?',
+          date: 'August 30, 2025'
+        },
+        countdown: {
+          title: 'Countdown',
+          desc: 'The final steps before war. Tensions boil before Pinnacle.',
+          date: 'September 27, 2025'
+        },
+        pinnacle: {
+          title: 'Pinnacle',
+          desc: 'The apex of CGW. Championships, legacies, main event status — all on the line.',
+          date: 'October 25, 2025'
+        },
+        scorched: {
+          title: 'Scorched Earth',
+          desc: 'No alliances, no mercy. Total destruction reigns.',
+          date: 'November 22, 2025'
+        },
+        veil: {
+          title: 'Glass Veil',
+          desc: 'Secrets, betrayals, and shocking revelations crash through the surface.',
+          date: 'December 6, 2025'
+        },
+        legacy: {
+          title: 'Legacy Trials',
+          desc: 'Who earns their place in the CGW pantheon? A tournament of fate.',
+          date: 'December 20, 2025'
+        },
+        final: {
+          title: 'Final Judgment',
+          desc: 'Season finale. All stories end — some in glory, some in ruin.',
+          date: 'December 27, 2025'
+        }
+      };
 
-      box.style.display = 'block';
+      const show = shows[id];
+      if (show) {
+        title.textContent = show.title;
+        desc.textContent = show.desc;
+        date.textContent = show.date;
+        box.style.display = 'block';
+      }
     }
-  </script></body>
+  </script>
+
+</body>
 </html>
