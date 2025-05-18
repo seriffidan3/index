@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CGW - Home</title>
   <style>
+
+    .news-flex {
+  display: flex;
+  gap: 20px;
+}
+
+.news-main-image img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.news-detail {
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-left: 4px solid crimson;
+  border-radius: 6px;
+}
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -164,6 +184,26 @@
       </ol>
     </div>
   </div>
+/* JS kodlari */
+<script>
+  function showNews(id) {
+    const detailBox = document.getElementById('news-detail');
+    const title = document.getElementById('detail-title');
+    const body = document.getElementById('detail-body');
+    const image = document.getElementById('detail-image');
 
+    detailBox.style.display = 'block';
+
+    if (id === 'luck') {
+      title.textContent = 'Luck of The Draw Announced!';
+      body.textContent = 'CGW\'s first PPV is coming. With stakes high and egos higher, who will walk out with the contract?';
+      image.src = 'luck.jpg'; // görsel dosyasını repo'ya yüklemelisin
+    } else if (id === 'rogue') {
+      title.textContent = 'Johnny Rogue Dominates Pulse';
+      body.textContent = 'Another main event, another victim. Johnny Rogue shows no mercy and no signs of slowing down.';
+      image.src = 'rogue.jpg';
+    }
+  }
+</script>  
 </body>
 </html>
