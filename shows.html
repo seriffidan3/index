@@ -37,6 +37,17 @@
       margin: auto;
     }
 
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .header-logo img {
+      height: 50px;
+    }
+
     .episode {
       background-color: #1a1a1a;
       border-left: 4px solid crimson;
@@ -53,6 +64,12 @@
       color: gray;
       font-size: 0.9em;
       margin-bottom: 10px;
+    }
+
+    .episode img {
+      width: 100%;
+      border-radius: 6px;
+      margin: 15px 0;
     }
 
     .episode p {
@@ -73,11 +90,15 @@
   </div>
 
   <div class="container">
-    <h1>CGW Pulse – Weekly Episodes</h1>
+    <div class="header-logo">
+      <img src="pulse-logo.png" alt="Pulse Logo">
+      <h1>CGW Pulse – Weekly Episodes</h1>
+    </div>
 
     <div class="episode">
       <h2>Week 1 – The Debut</h2>
       <div class="date">May 19, 2025</div>
+      <img src="pulse-week1.jpg" alt="Pulse Episode 1 Poster">
       <p>
         CGW launched its first-ever broadcast with a bang. The show opened with the coronation of the inaugural World Heavyweight Champion, Johnny Rogue, but the celebration was cut short by the unexpected arrival of The New Order — a chaotic faction led by an unseen mastermind.
       </p>
