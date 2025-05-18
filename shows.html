@@ -1,1 +1,117 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGW - Shows</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }.nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+}
 
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: crimson;
+}
+
+.container {
+  padding: 30px;
+}
+
+.show-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.show-card {
+  background-color: #1a1a1a;
+  width: 200px;
+  border-left: 4px solid crimson;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.show-card:hover {
+  background-color: #2a2a2a;
+}
+
+.show-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.show-detail {
+  margin-top: 30px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-left: 4px solid crimson;
+  border-radius: 6px;
+  display: none;
+}
+
+  </style>
+</head>
+<body>  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="shows.html">Shows</a>
+    <a href="#">PPVs</a>
+    <a href="#">Wrestlers</a>
+    <a href="#">Championships</a>
+    <a href="#">Standings</a>
+  </div>  <div class="container">
+    <h1>CGW Shows</h1>
+    <div class="show-grid">
+      <div class="show-card" onclick="showDetail('pulse')">
+        <img src="pulse-logo.png" alt="Pulse">
+        <h4>PULSE</h4>
+      </div>
+      <div class="show-card" onclick="showDetail('lotd')">
+        <img src="lotd-logo.png" alt="Luck of the Draw">
+        <h4>Luck Of The Draw</h4>
+      </div>
+    </div><div class="show-detail" id="show-detail">
+  <h2 id="detail-title"></h2>
+  <p id="detail-description"></p>
+  <p><strong>Date:</strong> <span id="detail-date"></span></p>
+</div>
+
+  </div>  <script>
+    function showDetail(id) {
+      const title = document.getElementById('detail-title');
+      const desc = document.getElementById('detail-description');
+      const date = document.getElementById('detail-date');
+      const box = document.getElementById('show-detail');
+
+      if (id === 'pulse') {
+        title.textContent = 'PULSE';
+        desc.textContent = 'The weekly heartbeat of CGW — where rivalries rise, chaos brews, and stars are made.';
+        date.textContent = 'Every Week (Mondays)';
+      } else if (id === 'lotd') {
+        title.textContent = 'Luck Of The Draw';
+        desc.textContent = 'The first PPV of the season. One night. One opportunity. Random chance meets destiny.';
+        date.textContent = 'May 24, 2025';
+      }
+
+      box.style.display = 'block';
+    }
+  </script></body>
+</html>
