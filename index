@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGW - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }.banner {
+  width: 100%;
+  height: 200px;
+  background-color: #222;
+  background-image: url('cgw-banner.jpg'); /* buraya banner görseli eklenecek */
+  background-size: cover;
+  background-position: center;
+}
+
+.nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: crimson;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.news-box {
+  background-color: #222;
+  width: 70%;
+  height: 400px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.power-rankings {
+  background-color: #222;
+  width: 25%;
+  height: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.power-rankings h3 {
+  margin-top: 0;
+  color: crimson;
+}
+
+  </style>
+</head>
+<body>  <div class="banner"></div>  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#">Shows</a>
+    <a href="#">PPVs</a>
+    <a href="#">Wrestlers</a>
+    <a href="#">Championships</a>
+    <a href="#">Standings</a>
+  </div>  <div class="main-content">
+    <div class="news-box">
+      <h2>Latest News</h2>
+      <p>[Buraya CGW haberleri gelecek...]</p>
+    </div><div class="power-rankings">
+  <h3>Top 5 of the Week</h3>
+  <ol>
+    <li>Johnny Rogue</li>
+    <li>Geordie Gunter</li>
+    <li>Ade</li>
+    <li>Dom Kozlov</li>
+    <li>Shayne Twilight</li>
+  </ol>
+</div>
+
+  </div></body>
+</html>
