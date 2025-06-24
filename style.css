@@ -30,3 +30,227 @@ h2, h3, h4 {
 a {
     color: var(--primary-purple);
     text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: var(--light-text);
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-purple);
+    color: var(--light-text);
+    border-color: var(--primary-purple);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-purple);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--light-text);
+    border-color: var(--light-text);
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-text);
+    color: var(--dark-charcoal);
+}
+
+/* --- Header & Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: var(--off-black);
+    border-bottom: 2px solid #333;
+}
+
+.nav-logo {
+    font-family: var(--header-font);
+    font-size: 2rem;
+    color: var(--light-text);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    font-family: var(--header-font);
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--light-text);
+}
+
+.community-link a {
+    color: var(--accent-gold);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080/111/fff?text=Action+Shot') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-family: var(--header-font);
+    font-size: 6rem;
+    color: var(--light-text);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-text);
+    margin-bottom: 30px;
+}
+
+/* --- Upcoming Event Section --- */
+.event-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--off-black);
+    border: 1px solid #333;
+}
+
+.event-poster {
+    width: 100%;
+    height: auto;
+}
+
+.event-info {
+    padding: 30px;
+}
+
+.event-info h3 {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+}
+
+/* --- Champions Showcase --- */
+.champions-showcase {
+    background-color: var(--off-black);
+}
+.champions-scroll {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.champion-card {
+    background-color: var(--dark-charcoal);
+    padding: 15px;
+    text-align: center;
+}
+.champion-card img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.champion-card h4 {
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+}
+.champion-card p {
+    font-family: var(--header-font);
+    font-size: 1.2rem;
+}
+.champion-card .tag-partner {
+    display: none; /* Simple version, can be improved */
+}
+
+/* --- News & Results Section --- */
+.news-results .container {
+    display: flex;
+    gap: 40px;
+    text-align: left;
+}
+
+.news-column, .results-column {
+    flex: 1;
+}
+
+.news-results h3 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--primary-purple);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.news-item, .results-item {
+    margin-bottom: 25px;
+}
+
+.news-item h4, .results-item h4 {
+    font-size: 1.4rem;
+    color: var(--light-text);
+    margin-bottom: 5px;
+}
+
+.news-item p, .results-item p {
+    color: var(--secondary-text);
+    line-height: 1.6;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--off-black);
+    padding: 30px;
+    text-align: center;
+}
+
+.social-icons a {
+    color: var(--secondary-text);
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-purple);
+}
+
+footer p {
+    margin-top: 20px;
+    color: #666;
+}
