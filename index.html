@@ -1,207 +1,115 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CGW - Home</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: white;
-    }.banner {
-  width: 100%;
-  height: 200px;
-  background-color: #222;
-  background-image: url('file_0000000007ec61f4b09e6eb647805889.png');
-  background-size: cover;
-  background-position: center;
-}
-
-.nav {
-  background-color: #333;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px 0;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-  color: crimson;
-}
-
-.main-content {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px;
-  flex-wrap: wrap;
-}
-
-.news-box {
-  background-color: #222;
-  width: 70%;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.news-box h2 {
-  margin-top: 0;
-}
-
-.news-flex {
-  display: flex;
-  gap: 20px;
-}
-
-.news-main-image img {
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.news-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  flex: 1;
-}
-
-.news-card {
-  background-color: #1a1a1a;
-  border-left: 4px solid crimson;
-  padding: 15px;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  cursor: pointer;
-}
-
-.news-card h4 {
-  margin-top: 0;
-  color: white;
-}
-
-.news-card .date {
-  font-size: 0.8em;
-  color: gray;
-  margin-bottom: 10px;
-}
-
-.news-card p {
-  color: #ccc;
-}
-
-.news-detail {
-  margin-top: 20px;
-  background-color: #1a1a1a;
-  padding: 15px;
-  border-left: 4px solid crimson;
-  border-radius: 6px;
-}
-
-.power-rankings {
-  background-color: #222;
-  width: 25%;
-  height: 200px;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.power-rankings h3 {
-  margin-top: 0;
-  color: crimson;
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-  }
-
-  .news-box, .power-rankings {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .news-flex {
-    flex-direction: column;
-  }
-
-  .news-main-image img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimson Gate Wrestling - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>  <div class="banner"></div>  <div class="nav">
-    <a href="#">Home</a>
-    <a href="shows.html">Shows</a>
-    <a href="#">PPVs</a>
-    <a href="#">Wrestlers</a>
-    <a href="#">Championships</a>
-    <a href="#">Standings</a>
-  </div>  <div class="main-content">
-    <div class="news-box">
-      <h2>Latest News</h2>
-      <div class="news-flex">
-        <div class="news-main-image">
-          <img id="mainImage" src="file_000000005b34620a80c9d3955476d2e9.png" alt="Main News" />
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-logo">CRIMSON GATE WRESTLING</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Roster</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Champions</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Shows</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">News</a></li>
+                <li class="nav-item"><a href="#" class="nav-link community-link">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">WELCOME TO THE CRIMSON GATE</h1>
+                <p class="hero-subtitle">Where Digital Immortals Are Forged.</p>
+                <a href="#" class="btn btn-primary">WATCH THE LATEST PULSE</a>
+            </div>
+        </section>
+
+        <section class="upcoming-event">
+            <h2>NEXT MAJOR EVENT</h2>
+            <div class="event-card">
+                <img src="https://via.placeholder.com/800x450/1a1a1a/990000?text=Event+Poster" alt="Event Poster" class="event-poster">
+                <div class="event-info">
+                    <h3>ASCENDED V: THE RECKONING</h3>
+                    <p>Live on June 29, 2025</p>
+                    <a href="#" class="btn btn-secondary">VIEW THE FULL CARD</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="champions-showcase">
+            <h2>CURRENT CHAMPIONS</h2>
+            <div class="champions-scroll">
+                <div class="champion-card">
+                    <img src="https://via.placeholder.com/300x400/333/fff?text=Wrestler" alt="CGW World Champion">
+                    <h4>CGW World Champion</h4>
+                    <p>THE PHANTOM</p>
+                </div>
+                <div class="champion-card">
+                    <img src="https://via.placeholder.com/300x400/333/fff?text=Wrestler" alt="CGW Intercontinental Champion">
+                    <h4>Intercontinental Champion</h4>
+                    <p>KAITO</p>
+                </div>
+                <div class="champion-card">
+                    <img src="https://via.placeholder.com/300x400/333/fff?text=Wrestler+1" alt="CGW Tag Team Champions">
+                     <img src="https://via.placeholder.com/300x400/333/fff?text=Wrestler+2" alt="CGW Tag Team Champions" class="tag-partner">
+                    <h4>Tag Team Champions</h4>
+                    <p>THE SYNDICATE</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="news-results">
+            <div class="container">
+                <div class="news-column">
+                    <h3>LATEST NEWS</h3>
+                    <div class="news-item">
+                        <h4>New Signing Shakes Up The Roster</h4>
+                        <p>Crimson Gate Wrestling management confirms the arrival of a major free agent...</p>
+                        <a href="#">Read More &raquo;</a>
+                    </div>
+                     <div class="news-item">
+                        <h4>Tensions Boil Over After Pulse Main Event</h4>
+                        <p>The rivalry between The Phantom and Kaito has reached a new level of intensity...</p>
+                        <a href="#">Read More &raquo;</a>
+                    </div>
+                </div>
+                <div class="results-column">
+                    <h3>RECENT RESULTS</h3>
+                     <div class="results-item">
+                        <h4>PULSE: EPISODE 12</h4>
+                        <p>See the full results from this week's action-packed show, including a shocking betrayal.</p>
+                        <a href="#">View Results &raquo;</a>
+                    </div>
+                     <div class="results-item">
+                        <h4>PULSE: EPISODE 11</h4>
+                        <p>Who stood tall in the main event? Find out what happened last week on Pulse.</p>
+                        <a href="#">View Results &raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-twitch"></i></a>
         </div>
-        <div class="news-container">
-          <div class="news-card" onclick="showNews('luck')">
-            <h4>Luck of The Draw Announced!</h4>
-            <p class="date">May 24, 2025</p>
-            <p>The first CGW PPV has been officially revealed.</p>
-          </div>
-          <div class="news-card" onclick="showNews('rogue')">
-            <h4>Johnny Rogue Dominates Pulse</h4>
-            <p class="date">May 22, 2025</p>
-            <p>Rogue crushed all competition again.</p>
-          </div>
-        </div>
-      </div>
-      <div id="news-detail" class="news-detail" style="display:none;">
-        <h3 id="detail-title"></h3>
-        <img id="detail-image" src="" alt="" style="width:100%; max-height:200px; object-fit:cover; border-radius:6px;" />
-        <p id="detail-body" style="margin-top:10px;"></p>
-      </div>
-    </div><div class="power-rankings">
-  <h3>Top 5 of the Week</h3>
-  <ol>
-    <li>Johnny Rogue</li>
-    <li>Geordie Gunter</li>
-    <li>Ade</li>
-    <li>Titan</li>
-    <li>Shayne Twilight</li>
-  </ol>
-</div>
+        <p>&copy; 2025 Crimson Gate Wrestling. All Rights Reserved.</p>
+    </footer>
 
-  </div>  <script>
-    function showNews(id) {
-      const detailBox = document.getElementById('news-detail');
-      const title = document.getElementById('detail-title');
-      const body = document.getElementById('detail-body');
-      const image = document.getElementById('detail-image');
-
-      detailBox.style.display = 'block';
-
-      if (id === 'luck') {
-        title.textContent = 'Luck of The Draw Announced!';
-        body.textContent = 'CGW\'s first PPV is coming. With stakes high and egos higher, who will walk out with the contract?';
-        image.src = 'file_000000006a386243b212d47a5a181a05.png';
-      } else if (id === 'rogue') {
-        title.textContent = 'Johnny Rogue Dominates Pulse';
-        body.textContent = 'Another main event, another victim. Johnny Rogue shows no mercy and no signs of slowing down.';
-        image.src = 'file_0000000003806246a8424736c5d21c61.png';
-      }
-    }
-  </script></body>
+</body>
 </html>
